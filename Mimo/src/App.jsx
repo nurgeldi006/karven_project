@@ -19,6 +19,7 @@ import TestsSelection from "./components/pages/tests/testsSelection";
 import HtmlTest from "./components/pages/tests/html/htmlTest";
 import CssTest from "./components/pages/tests/css/cssTest";
 import JSTest from "./components/pages/tests/javascript/javascriptTest";
+import Test from "./test/test";
 
 const ProtectedRoute = ({ element }) => {
   const { currentUser } = useContext(AuthContext);  
@@ -55,6 +56,8 @@ function App() {
             <Route path='/tests/css' element={<ProtectedRoute element={<CssTest />} />} />
             <Route path='/tests/javascript' element={<ProtectedRoute element={<JSTest />} />} />
 
+
+            <Route path='/test' element={<ProtectedRoute element={<Test/>}/>}/>
             <Route path='/profile' element={<ProtectedRoute element={<Profile />} />} />
             <Route path='/users' element={<ProtectedRoute element={<UserListPage />} />} />
             <Route path='/ranking' element={<ProtectedRoute element={<Ranking/>} />} />

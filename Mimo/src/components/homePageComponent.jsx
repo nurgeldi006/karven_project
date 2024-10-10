@@ -30,6 +30,10 @@ const Home = () => {
                     <Link to={"/tests"} className="tests">
                         Tests
                     </Link>
+                                        
+                    <Link to={"/test"} className="tests">
+                        Test
+                    </Link>
                 </div>
             </div>
 
