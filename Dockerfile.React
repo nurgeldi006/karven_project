@@ -1,0 +1,18 @@
+FROM node:16
+
+WORKDIR /usr/src/app
+
+
+COPY Mimo/package*.json ./Mimo/
+
+
+RUN cd Mimo && npm install
+
+
+COPY Mimo/ ./Mimo/
+
+RUN cd Mimo && npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev", "--prefix", "Mimo"]  
